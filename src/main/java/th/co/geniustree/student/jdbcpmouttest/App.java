@@ -28,7 +28,7 @@ public class App {
         List<Student> student = select("select * from test",connection);
         // รันออกมาแสดง
         for (int i = 0; i < student.size(); i++) {
-            System.out.println(student.get(i));
+            System.out.println("List at "+i+" "+student.get(i));
         }
     }
     private static void data(Connection connection) throws SQLException {
@@ -41,7 +41,7 @@ public class App {
             stm.executeUpdate("insert into TEST(ID,NAME)values('X1','Suttipong')");
             stm.executeUpdate("insert into TEST(ID,NAME)values('V2','Promouth')");
             stm.executeUpdate("insert into TEST(ID,NAME)values('C3','SongSang')");
-           // int x = 5/0;
+            int x = 5/0;
             connection.commit();
             //commit
         } catch (Exception SQLException) {
@@ -64,4 +64,5 @@ public class App {
          rs.close();
          return students;
     }
+    //edit this for just check githup
 }
